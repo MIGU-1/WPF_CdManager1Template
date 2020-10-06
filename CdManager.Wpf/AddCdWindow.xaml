@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CdManager.Wpf"
         mc:Ignorable="d"
-        Title="AddCdWindow" Height="300" Width="300">
+        Title="AddCdWindow" Height="200" Width="306"
+        Style="{StaticResource ResourceKey=WindowStyle}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

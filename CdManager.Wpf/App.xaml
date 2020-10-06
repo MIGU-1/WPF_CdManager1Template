@@ -11,9 +11,85 @@
             <Setter Property="Control.Margin" Value="5,10,0,20"/>
         </Style>
 
+        <!--<Style TargetType="TextBox">
+            <Setter Property="Margin" Value="3,3,3,3"/>
+        </Style>-->
+
+        <Style x:Key="WindowStyle" TargetType="Window">
+            <Setter Property="Background" Value="Azure"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5,5,5,5"/>
+            <Setter Property="MinHeight" Value="30"/>
+        </Style>
+
+        <Style TargetType="ListView">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                        <GradientStop Color="SteelBlue" Offset="0" />
+                        <GradientStop Color="Purple" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style TargetType="TextBox">
             <Setter Property="Margin" Value="3,3,3,3"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="GotFocus">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation To="20" Duration="0:0:0.6" Storyboard.TargetProperty="FontSize"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+                <EventTrigger RoutedEvent="LostFocus">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation To="12" Duration="0:0:0.6" Storyboard.TargetProperty="FontSize"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
         </Style>
-        
+
+        <Style TargetType="ListViewItem">
+            <Setter Property="Margin" Value="3,3,3,3"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation To="15" Duration="0:0:0.6" Storyboard.TargetProperty="FontSize"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation To="12" Duration="0:0:0.6" Storyboard.TargetProperty="FontSize"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border x:Name="Border" BorderBrush="Blue" BorderThickness="3" CornerRadius="3" Background="AliceBlue" Padding="3" Margin="3">
+
+                <TextBlock Margin="{TemplateBinding Padding}" Text="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+            </Border>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="Border" Property="Background" Value="LightBlue"/>
+                    <Setter TargetName="Border" Property="Cursor" Value="Hand"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>        
     </Application.Resources>
 </Application>
