@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:CdManager.Wpf"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="FormCaptionStyle">
+            <Setter Property="Control.FontSize" Value="20"/>
+            <Setter Property="Control.FontWeight" Value="Bold"/>
+            <Setter Property="Control.Foreground" Value="Sienna"/>
+            <Setter Property="Control.Margin" Value="5,10,0,20"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="3,3,3,3"/>
+        </Style>
+        
     </Application.Resources>
 </Application>

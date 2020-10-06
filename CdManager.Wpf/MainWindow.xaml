@@ -13,7 +13,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Margin="0,10,0,20">Cd-Sammlung</TextBlock>
+        <TextBlock Grid.Row="0" Margin="0,10,0,20" Style="{StaticResource ResourceKey=FormCaptionStyle}">Cd-Sammlung</TextBlock>
 
         <!--<ListBox x:Name="listBoxCds" Grid.Row="1">
             <ListBox.ItemTemplate>

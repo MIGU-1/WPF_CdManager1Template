@@ -13,7 +13,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Margin="0,10,0,20">Neue Cd anlegen</TextBlock>
+        <TextBlock Grid.Row="0" Margin="0,10,0,20" Style="{StaticResource ResourceKey=FormCaptionStyle}">Neue CD anlegen</TextBlock>
 
         <Grid Name="grdCdFields" Grid.Row="1">
             <Grid.RowDefinitions>

@@ -45,6 +45,7 @@ namespace CdManager.Wpf
         {
             Cd selectedCd = listBoxCds.SelectedItem as Cd;
 
+
             if (selectedCd == null)
             {
                 MessageBox.Show("Sie müssen eine CD auswählen");
